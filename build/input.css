@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  [data-edge="bottom"],
+  [data-edge="top"] {
+    @apply cursor-ns-resize;
+  }
+  details[open] .icon-sm {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+  input[type="text"] {
+    background: transparent;
+  }
+  input[type="text"]:focus {
+    outline: none;
+  }
+  .text-primary {
+    @apply text-slate-700 dark:text-slate-400;
+  }
+  .text-secondary {
+    @apply text-slate-700 dark:text-slate-400;
+  }
+  .custom-border {
+    @apply border-slate-900/10 dark:border-slate-300/10;
+  }
+  .scaler {
+    @apply absolute cursor-ew-resize bg-transparent hover:bg-slate-100 hover:dark:bg-slate-700;
+  }
+  .custom-indicator {
+    @apply block h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-700;
+  }
+  .item-hover {
+    @apply bg-gradient-to-r hover:from-[#E3F5FF] dark:hover:from-slate-700;
+  }
+  .icon {
+    @apply h-4 w-4 stroke-slate-900 text-slate-900 dark:stroke-slate-400 dark:text-slate-400;
+  }
+  .icon-sm {
+    @apply h-3 w-3;
+  }
+  .bg-icon-button {
+    @apply grid h-6 w-6 place-content-center rounded-full hover:bg-[#E3F5FF] hover:dark:bg-slate-700;
+  }
+  .bg-element {
+    @apply bg-[#E3F5FF] dark:bg-slate-800;
+  }
+  .bg-element-two {
+    @apply bg-[#E5ECF6] dark:bg-slate-800;
+  }
+  .bg-element-three {
+    @apply bg-[#F7F9FB] dark:bg-slate-800;
+  }
+  .bg-background {
+    @apply bg-white dark:bg-slate-900;
+  }
+  .current-link {
+    @apply bg-gradient-to-r from-slate-200 dark:from-slate-800;
+  }
+  .left-sidebar {
+    width: 14rem;
+  }
+  .right-sidebar {
+    width: 15rem;
+  }
+  .w-0 {
+    width: 0px !important;
+    transition: 0.5s;
+  }
+  .main-height {
+    height: calc(100vh - 3.5rem);
+  }
+  .hidden {
+    display: none;
+  }
+}
